@@ -14,6 +14,7 @@
 **/*.png
 **/*.tif
 **/*.db
+**/*.json
 
 # ignores all .rds recursive from the current folder
 **.rds
@@ -26,6 +27,7 @@
 **.png
 **.tif
 **.db
+**.json
 
 # ignores all .rds files JUST in the current folder
 *.rds

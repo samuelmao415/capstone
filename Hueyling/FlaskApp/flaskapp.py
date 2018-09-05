@@ -1,21 +1,18 @@
-from flask import Flask, render_template, request, url_for
-from random import choice
-import os
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def showImg():	
-	names = os.listdir(os.path.join(app.static_folder, 'images'))
+def hello_world():
+  return 'Hello from Flask!'
 
-##############This will random choose one image to display ##################
 
-	img_url = url_for('static', filename=os.path.join('images', choice(names)))
-	return render_template('simple_image.html', img_url=img_url)
+from collections import Counter
+@app.route('/countme/<input_str>')
+def count_me(input_str):
+	input_counter = Counter(input_str)
+	response = []
+	for letter, count in input_counter.most_common():
+		response.append('"{}": {}'.format(letter, count))
+	return '<br>'.join(response)
 
-###############This will list all the images in the subfolder ###########################
-#	imgs = []
-#	for n in names:
-#		img_url = url_for('static', filename=os.path.join('images', n))
-#		imgs.append(img_url)
-#	return render_template('all_images.html', img_urls=imgs)

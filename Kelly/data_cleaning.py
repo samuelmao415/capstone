@@ -40,7 +40,7 @@ def data_cleaning(all_data,removeNa = True, keep_percent = False, rmPunctuation 
 			stop = ['ASOS', 'macy', 'bloomingdale', "fashion nova", "YAS", "Ditsy", "Noisy", "May", "Ted","Baker", "River","Island", "Karen","Scott","PrettyLittleThing","Roxy","DESIGN","Chi", \
                "Alfani","Boohoo","Sofie","Schnoor","Ellesse", "Jeannie","TFNC","Sacred", "Hawk","Urban","Bliss","Puma","adidas", "Stella", \
                'cm', 'size', 'web id', 'approx', 'model', 'height', 'is', 'and', 'she', 'wearing', 'small', 'approximate', 'measurements', 'height', 
-               'bust', 'waist', 'hips']
+               'bust', 'waist', 'hips', 'made', 'usa', 'things', 'regular', 'right']
 			
 			lst = r'|'.join([x.lower() for x in stop])
 			

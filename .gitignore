@@ -1,6 +1,7 @@
 ## ignore the jupyter notebook backup file
 .ipynb_checkpoints
 .DS_Store
+.model
 
 # ignores all .rds in subdirectories recursive from the current 
 # folder (does not include the current folder)
@@ -15,12 +16,16 @@
 **/*.tif
 **/*.db
 **/*.json
+**/*.pickle
+**/*.model
 
 # ignores all .rds recursive from the current folder
 **.rds
 **.csv
 **.gz
 **.pkl
+**.model
+**.pickle
 **.txt
 **.jpg
 **.jpeg

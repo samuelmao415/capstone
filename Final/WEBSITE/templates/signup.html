@@ -1,0 +1,150 @@
+<style>
+.form-container {
+   border: 1px solid #070708;
+   background: #1a59b8;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d1dcf0), to(#1a59b8));
+   background: -webkit-linear-gradient(top, #d1dcf0, #1a59b8);
+   background: -moz-linear-gradient(top, #d1dcf0, #1a59b8);
+   background: -ms-linear-gradient(top, #d1dcf0, #1a59b8);
+   background: -o-linear-gradient(top, #d1dcf0, #1a59b8);
+   background-image: -ms-linear-gradient(top, #d1dcf0 0%, #1a59b8 100%);
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 1px 0;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width:300px;
+   padding:20px;
+   width:300px;
+   }
+.form-field {
+   border: 1px solid #050301;
+   background: #e3c3df;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   color: #030208;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   padding:8px;
+   margin-bottom:20px;
+   width:280px;
+   }
+.form-field:focus {
+   background: #fff;
+   color: #050301;
+   }
+.form-container h2 {
+   text-shadow: #a8c8e0 0 1px 0;
+   font-size:18px;
+   margin: 0 0 10px 0;
+   font-weight:bold;
+   text-align:center;
+    }
+.form-title {
+   margin-bottom:10px;
+   color: #000314;
+   text-shadow: #a8c8e0 0 1px 0;
+   }
+.submit-container {
+   margin:8px 0;
+   text-align:right;
+   }
+.submit-button {
+   border: 1px solid #525252;
+   background: #9c9c9c;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a9abab), to(#9c9c9c));
+   background: -webkit-linear-gradient(top, #a9abab, #9c9c9c);
+   background: -moz-linear-gradient(top, #a9abab, #9c9c9c);
+   background: -ms-linear-gradient(top, #a9abab, #9c9c9c);
+   background: -o-linear-gradient(top, #a9abab, #9c9c9c);
+   background-image: -ms-linear-gradient(top, #a9abab 0%, #9c9c9c 100%);
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #9e9e9e 0 1px 0;
+   color: #0c0f0f;
+   font-family: helvetica, serif;
+   padding: 8.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.submit-button:hover {
+   border: 1px solid #447314;
+   text-shadow: #31540c 0 1px 0;
+   background: #dbdbdb;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d6d6d6), to(#dbdbdb));
+   background: -webkit-linear-gradient(top, #d6d6d6, #dbdbdb);
+   background: -moz-linear-gradient(top, #d6d6d6, #dbdbdb);
+   background: -ms-linear-gradient(top, #d6d6d6, #dbdbdb);
+   background: -o-linear-gradient(top, #d6d6d6, #dbdbdb);
+   background-image: -ms-linear-gradient(top, #d6d6d6 0%, #dbdbdb 100%);
+   color: #fff;
+   }
+.submit-button:active {
+   text-shadow: #31540c 0 1px 0;
+   border: 1px solid #447314;
+   background: #8dc059;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#dbdbdb));
+   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
+   background: -moz-linear-gradient(top, #6aa436, #8dc059);
+   background: -ms-linear-gradient(top, #6aa436, #8dc059);
+   background: -o-linear-gradient(top, #6aa436, #8dc059);
+   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
+   color: #fff;
+   }
+
+body, html {
+height: 100%;
+margin: 0;
+}
+
+.bg {
+/* The image used */
+background-image: url("./static/comp.jpg");
+
+/* Full height */
+height: 100%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.hero-text {
+text-align: center;
+position: absolute;
+top: 55%;
+left: 18%;
+transform: translate(-50%, -50%);
+color: white;
+}
+</style>
+
+<div class="bg"></div>
+
+{% extends "base.html"%}
+{% block content %}
+<br>
+<center>
+<form class="form-container">
+    <div class="form-title"><h2>Sign up</h2></div>
+        <div class="form-title">Name</div>
+            <input class="form-field" type="text" name="firstname" /><br />
+        <div class="form-title">Email</div>
+            <input class="form-field" type="text" name="email" /><br />
+        <div class="submit-container">
+            <input class="submit-button" type="submit" value="Submit" />
+    </div>
+</form>
+</center>
+{% endblock %}

@@ -1,0 +1,39 @@
+<style>
+body, html {
+height: 100%;
+margin: 0;
+}
+
+.bg {
+/* The image used */
+background-image: url("/static/hat.jpg");
+
+/* Full height */
+height: 50%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
+
+
+
+
+
+
+<div class="bg"></div>
+{% extends "base.html"%}
+{% block content %}
+<div class="jumbotron">
+<p align='center' style="font-family:Georgia;font-size:40px;">Welcome to Fashion Rec.</p>
+<p align='center' style="font-family:Georgia;">We used 6 different personalities, a pinch of sarcasm, a cup of overqualified genius, a dab of deep-learning, a splash of the chinese language, and a wheel barrow full of web-scraping to create this website we have before you.</p>
+<p align='center' style="font-family:Georgia;">Our intentions were to create a place for those who want to style up, without having to put all their money down. Let our system recommend clothes</p>
+<p align='center' style="font-family:Georgia;"><b> Check out our top trending outifts!</b></p>
+<p align='right'>
+<a href="/blogger" style="font-family:Georgia;">Next Page</a>
+</p>
+</div>
+
+{% endblock %}

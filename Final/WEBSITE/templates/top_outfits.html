@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% block content %}
+<div class="jumbotron">
+<h1>These are our trending outfits</h1>
+<p>Take a look and see what you like!</p>
+  <!-- <ul id = 'images-list'>
+    {% for image in imgs %}
+    <li>
+        <img src="{{image}}" width="20%">
+    </li>
+    {% endfor %}
+  </ul> -->
+  <form action="{{url_for('thankyou')}}">
+    <input type="button" value="Exit">
+  </form>
+
+</div>
+{% endblock %}

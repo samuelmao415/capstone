@@ -1,0 +1,171 @@
+<style>
+  body, html {
+  height: 100%;
+  margin: 0;
+  }
+
+  .bg {
+  /* The image used */
+  background-image: url("/static/stripes.jpg");
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .hero-text {
+  text-align: left;
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  color: gray;
+  font-size: 35px
+  }
+
+</style>
+
+
+
+
+
+
+  <div class="bg">
+    <div class="hero-text">
+      <br> This
+      <br> May
+      <br> Be
+      <br> Your
+      <br> Next
+      <br> #OOTD
+    </div> 
+  </div>
+
+{% extends "base.html"%}
+{% block content %}
+<HTML>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .row {
+            display: -ms-flexbox; /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        
+        /* Create two equal columns that sits next to each other */
+        .column {
+            -ms-flex: 50%; /* IE 10 */
+            flex: 50%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+        
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .btn:hover {
+            background-color: #ddd;
+        }
+        
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+         </style>
+   <HEAD>
+      <TITLE>
+         Trending Now! 
+      </TITLE>
+   </HEAD>
+   <br>
+   <br>
+   <br>
+<BODY>
+   <h2><center>@{{ blogger}}'s Trending Images in the Past Six Months</center></h2>
+   <br>
+   <br>
+   <table id="images-list" style="width:100%">
+
+      <tr>
+      {% for topic in topics %}
+      <th>Style {{ topic }} </th>
+      {% endfor %}
+      </tr>
+
+
+   <tr>
+      {% for url in img_urls %}
+      <th style="width:20%">
+   <form action = {{ url_for('recommendation')}} method = "post">
+      <input type="hidden" name = "Id" value = {{ url }}>
+      <input type="image" src = {{ url }} name = "image" width="150" height="200">
+   </form>
+      </th>
+      {% endfor %}
+   </tr>
+   
+   
+
+    <tr>
+      {% for like in likes %}
+      <th>{{ like }} likes</th>
+      {% endfor %}
+   </tr>
+
+   <tr>
+      {% for comment in comments %}
+      <th>{{ comment }} comments</th>
+      {% endfor %}
+   </tr>
+
+   <tr>
+      {% for date in dates %}
+      <th>{{ date }} </th>
+      {% endfor %}
+   </tr> 
+
+</table>
+   
+</BODY>
+<br>
+<br>
+<br>
+<br>
+<br>
+</HTML>
+{% endblock %}

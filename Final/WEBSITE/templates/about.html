@@ -1,0 +1,106 @@
+<style>
+body, html {
+height: 100%;
+margin: 0;
+}
+
+.bg {
+/* The image used */
+background-image: url("./static/tape.jpg");
+
+/* Full height */
+height: 70%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
+
+<div class="bg"></div>
+
+{% extends "base.html"%}
+{% block content %}
+
+<style>
+    body {margin:25px;}
+
+    div.polaroid {
+        width: 25%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+    }
+
+    div.container {
+        text-align: center;
+        padding: 10px 20px;
+    }
+</style>
+<div class="jumbotron">
+    <h1>Our Process Here At Six Sigma</h1>
+    <p>We use NLP to determine fashion trends and trained a Deep CNN to recognize similar and available products in the market. </p>
+
+    <div>
+        <h1>Get To Know The Team</h1>
+        <ul class="list-unstyled">
+            <li class="media">
+                <img class="mr-3" src="./static/Hueyling.jpg" alt="Hueyling" width="64" height="64">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1">Hueyling Kao</h5>
+                <b> Chief Executive Officer </b>
+                <p>Mastermind. Genuis. Creator.</p>
+                </div>
+            </li>
+            <li class="media my-4">
+                <img class="mr-3" src="./static/Silvia.jpg" alt="Silvia" width="64" height="64">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1">Silvia Lu</h5>
+                <b> Chief Development Officer </b>
+                <p>Strategist. Bold. Driven.</p>
+                </div>
+            </li>
+            
+            <li class="media">
+                <img class="mr-3" src="./static/Sam.jpg" alt="Sam" width="64" height="64">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1">Samuel Mao</h5>
+                <b> Director of Communications </b>
+                <p> Dynamic. Adaptable. Confident</p>
+                </div>
+            </li>
+            <br>
+            <li class="media">
+                <img class="mr-3" src="./static/Jason.jpg" alt="Jason" width="64" height="64">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1">Jason Xu</h5>
+                <b> Chief Data Officer </b>
+                <p>Theorist. Intuitive. Sophisticated</p>
+                </div>
+            </li>
+            <br>
+            <li class="media">
+                <img class="mr-3" src="./static/Kelly.jpg" alt="Kelly" width="64" height="64">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1">Kelly Ho</h5>
+            <b> Chief Technology Officer </b>
+            <p>Decisive. Intelligent. Tactful</p>
+                </div>
+            </li>
+            <br>
+            <li class="media">
+                <img class="mr-3" src="./static/Richie.jpg" alt="Richie" width="64" height="64">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1">Richie</h5>
+               <b> President of FashionRecc </b>
+               <p>Hilarious. Command. Determined.</p>
+                </div>
+            </li>
+            </ul>
+    </div>
+</div>
+
+
+
+{% endblock %}
